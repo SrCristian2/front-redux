@@ -22,7 +22,7 @@ const noteInitialState = {
 
 function App() {
   const dispatch = useDispatch();
-  const { notes, filterNotes, activateLink } = useSelector(
+  const { notes, filterNotes, activeLink } = useSelector(
     (state) => state.noteStore
   );
 
@@ -96,7 +96,7 @@ function App() {
               }}
             >
               <a
-                className={`nav-link ${category == activateLink && "active"} `}
+                className={`nav-link ${category == activeLink && "active"} `}
                 href="#"
               >
                 {category}
